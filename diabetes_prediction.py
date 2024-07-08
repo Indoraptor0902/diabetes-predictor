@@ -49,7 +49,7 @@ class DiabetesPredictor:
         user_data = list(map(float, user_input))
         
         # Convert the user input into a numpy array and reshape it
-        user_data = np.array(user_data).reshape(1, -1)
+        user_data = np.array(user_data).reshape(1, -1) # 1 indicates 1 row, and -1 indicates as many columns as necessary
         
         # Replace zeros with the mean values for columns that cannot have zero
         for i, column in enumerate(self.zero_not_accepted):
@@ -71,15 +71,5 @@ class DiabetesPredictor:
 predictor = DiabetesPredictor()
 
 print(predictor.has_diabetes([0,predictor.df['Glucose'].mean(skipna=True), 83,predictor.df['SkinThickness'].mean(skipna=True),predictor.df['Insulin'].mean(skipna=True), 20.9,predictor.df['DiabetesPedigreeFunction'].mean(skipna=True),16]))
+
 print(predictor.confusion_matrix(), predictor.accuracy_score(), predictor.f1_score())
-
-true_count = 0
-false_count = 0
-
-for prediction in predictor.orig_df.iloc[:, 8]:
-    if prediction == 1:
-        true_count += 1
-    elif prediction == 0:
-        false_count += 1
-
-print("Number of true: " + str(true_count) + " | Number of false: " + str(false_count))
