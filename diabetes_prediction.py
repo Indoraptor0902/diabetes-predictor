@@ -68,8 +68,4 @@ class DiabetesPredictor:
             return False
 
 
-predictor = DiabetesPredictor()
 
-print(predictor.has_diabetes([0,predictor.df['Glucose'].mean(skipna=True), 83,predictor.df['SkinThickness'].mean(skipna=True),predictor.df['Insulin'].mean(skipna=True), 20.9,predictor.df['DiabetesPedigreeFunction'].mean(skipna=True),16]))
-
-print(predictor.confusion_matrix(), predictor.accuracy_score(), predictor.f1_score())
