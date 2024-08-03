@@ -44,7 +44,7 @@ class DiabetesPredictor:
     def accuracy_score(self):
         return accuracy_score(self.y_test, self.y_pred)
     
-    def has_diabetes(self, user_input):
+    def has_diabetes(self, user_input: list):
         # Ensure the input is a list of floats
         user_data = list(map(float, user_input))
         

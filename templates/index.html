@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet"  href="static/style.css">
+        <title>Test</title>
+    </head>
+    <body>
+        <div class="header-box">
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+ 
+                    <li>
+                        <a href="#">Features</a>
+                        <!--<ul>
+                            <li><a href= Option1.html>Calculator</a></li>
+                            <li><a href= Option2.html >Quiz</a></li>
+                 
+                        </ul>-->
+                    </li>
+                </ul>
+ 
+ 
+            </nav>
+ 
+        </div>
+        <div class="header">
+            <h1>Heart Attack Risk Analysis</h1>
+            <p>Find out if you're at risk</p>
+        </div>
+        
+
+        <form action="/" method="POST">
+            <label for="Pregnancies">Number of Pregnancies</label>
+            <input type="text" name="pregnancies">
+
+            <label for="Glucose">Glucose Level</label>
+            <input type="text" name="glucose">
+
+            <label for="BloodPressure">Diastolic Blood Pressure</label>
+            <input type="text" name="bloodpressure">
+
+            <label for="SkinThickness">Skin Thickness</label>
+            <input type="text" name="skinthickness">
+
+            <label for="Insulin">Insulin Level</label>
+            <input type="text" name="insulin">
+
+            <label for="BMI">BMI</label>
+            <input type="text" name="bmi">
+
+            <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function</label>
+            <input type="text" name="diabetespedigreefunction">
+
+            <label for="Age">Age</label>
+            <input type="text" name="age">
+
+            <button type="submit">Submit</button>
+        </form>
+        <p>{{statement}}</p>
+
+    </body>
+</html>
